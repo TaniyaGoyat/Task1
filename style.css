@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    outline:none;
+}
+
+body{
+    height:100vh;
+    width:100%;
+    font-family: sans-serif;
+    font-size:16px;
+    background-color: black;
+     display:flex; 
+     justify-content:center;
+    align-items:center; 
+}
+.outer-circle{
+    width:230px;
+    height:230px;
+    border-radius:50%;
+  background-color: white;
+  display:flex; 
+  justify-content:center;
+ align-items:center;
+} 
+.inner-circle{
+    width:210px;
+    height:210px;
+    border-radius:50%;
+    background-color: black;
+    display:flex; 
+    justify-content:center;
+   align-items:center;
+}
+.animation-bg{
+    background: linear-gradient(-45deg , #ee7752,orange,#e73c7e,#23a6d5,#23d5ab);
+    background-size: 400% 400%;
+    animation:gradient 1s ease infinite;
+}
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+.text{
+    color:white;
+    font-size:23px;
+}
+
+.min{
+    font-size:42px;
+}
+.sec{
+    font-size:35px;
+}
+.msec{
+    font-size:27px;
+}
+.button-wrapper{
+    width:250px;
+    margin-top:30px;
+    display:flex;
+    justify-content: space-between;
+    
+}
+.button{
+    height:50px;
+    width:50px;
+    border: 2px solid white;
+    border-radius:50%;
+    background-color: black;
+    color:white;
+    font-weight: bold;
+}
+.button:hover{
+    background-color:white;
+    color:black; 
+}
+
+
+.laps{
+   list-style:none;
+   color:white;
+   width:250px;
+   height:250px;
+   overflow:auto;
+   position:relative;
+   padding:30px 0;
+}
+.cnt{
+  color:#ccc;
+}
+.time-stamp{
+  display:inline-block;
+  margin-left:25px;
+}
+.lap-item{
+    margin-top:10px;
+    display:inline-block;
+    width:100%;
+    padding:15px;
+    /* background-color: red; */
+    text-align:center;
+    border:1px solid #444;
+    border-radius:50px;
+}
+
+.laps::-webkit-scrollbar{
+   display:none;
+}
+.lap-clear-button{
+    position:fixed;
+    display:block;
+    z-index:1000;
+    bottom:35px;
+    left:50%;
+    transform:translate(-50%);
+   width:130px;
+   padding:10px 0;
+   border:1px solid white;
+   border-radius:50px;
+   background-color: rgba(255,255,255,0.5);
+   cursor:pointer;
+  }
+  .hidden{
+    visibility:hidden;
+  }
